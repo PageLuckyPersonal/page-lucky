@@ -238,7 +238,9 @@ main .video-wrapper iframe {
   animation: 20s slider infinite;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   line-height: 1.5;
   font-family: "grenadiernf"serif;
 }
@@ -464,7 +466,8 @@ label {
   width: 90px;
 }
 
-input, textarea {
+input,
+textarea {
   font: 1em;
   width: 300px;
   border: 1px solid #999;
@@ -472,7 +475,8 @@ input, textarea {
   font-style: inherit;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: #000;
 }
 
@@ -499,7 +503,33 @@ button {
   main {
     max-width: 768px;
   }
-
+#all-headshots{
+  margin: 0 auto;
+}
+  .headshots-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+  }
+  .vertical-headshot {
+    flex: 1;
+  }
+  img.vertical-singer-headshot {
+    max-height: 350px;
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  img.horizontal-singer-headshot {
+    max-height: 250px;
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
   /* END MEDIA QUERIES 600 */
   /* MEDIA QUERIES 768 (Tablet) */
   @media only screen and (min-width: 768px) {
@@ -583,12 +613,12 @@ button {
       margin-right: 20px;
     }
 
-    main .video-wrapper iframe:nth-child(3) {
+    main .video-wrapper iframe:nth-child(3) {}
 
-    }
     .mymic {
       display: block;
     }
+
     .instagram-singer-images .instagram-singer-images-1 {
       display: flex;
       flex-direction: row;
@@ -664,6 +694,12 @@ button {
       flex: 2;
     }
   }
+
+  .headshots-container {
+    flex-direction: row;
+  }
+
+  img.vertical-singer-headshot {}
 
   /* END MEDIA QUERIES 768 */
   /* MEDIA QUERIES 1024*/
