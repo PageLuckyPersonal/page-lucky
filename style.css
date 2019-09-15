@@ -434,28 +434,6 @@ img.img-center {
   text-align: center;
 }
 
-.contact-row {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-row .contact-img {
-  flex: 1;
-}
-
-#backless-dress {
-  width: 100%;
-  height: 100%;
-  padding-top: 20px;
-}
-
-.contact-row form {
-  flex: 1;
-  padding: 1em;
-  border: 1px solid #CCC;
-  border-radius: 1em;
-  background-color: #E5E5E5;
-}
 
 form div+div {
   margin-top: 1em;
@@ -497,7 +475,30 @@ button {
 }
 
 /* START MEDIA QUERIES 600 */
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 600px) {
+  #mc-embedded-subscribe-form input[type=checkbox]{
+  display: inline; 
+  width: auto;
+  margin-right: 10px;
+}
+  #mc_embed_signup{
+  background:#fff; 
+  clear: left;
+  font:14px Helvetica,Arial,sans-serif; 
+}
+
+	#mergeRow-gdpr {
+  margin-top: 20px;
+}
+	#mergeRow-gdpr fieldset label {
+  font-weight: normal;
+}
+	#mc-embedded-subscribe-form .mc_fieldset{
+  border:none;
+  min-height: 0px;
+  padding-bottom:0px;
+}
+}
 
 @media only screen and (min-width: 600px) {
   main {
@@ -530,6 +531,7 @@ button {
     margin-left: auto;
     margin-right: auto;
   }
+}
   /* END MEDIA QUERIES 600 */
   /* MEDIA QUERIES 768 (Tablet) */
   @media only screen and (min-width: 768px) {
@@ -677,30 +679,10 @@ button {
       height: 30px;
     }
 
-    .contact-row {
-      flex-direction: row;
-    }
-
-    .contact-row .contact-img {
-      flex: 1;
-    }
-
-    #backless-dress {
-      padding-top: 0;
-      width: 80%;
-    }
-
-    .contact-row form {
-      flex: 2;
-    }
-  }
-
   .headshots-container {
     flex-direction: row;
   }
-
-  img.vertical-singer-headshot {}
-
+  }
   /* END MEDIA QUERIES 768 */
   /* MEDIA QUERIES 1024*/
   @media only screen and (min-width: 1024px) {
@@ -862,9 +844,5 @@ button {
       width: 100%;
       height: auto;
       max-width: 400px;
-    }
-
-    #backless-dress {
-      width: 60%;
     }
   }

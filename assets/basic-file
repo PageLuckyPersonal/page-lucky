@@ -15,6 +15,7 @@
                         $("#footer").load("assets/footer.html");
                     });
                 </script>
+                 <link rel="icon" type="image/png" href="../page-lucky\images\Black-Transparent-Initials.png" />
             </head>
 <body>
     <div id="header"></div>
