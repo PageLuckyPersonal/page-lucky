@@ -70,9 +70,15 @@ header .icon-image-move-left {
   position: absolute;
 }
 
-.not-visible {
+.menu {
   visibility: hidden;
 }
+.myDropdown{
+  visibility: hidden;
+  }
+  .show {
+  visibility: visible;
+  }
 
 header nav ul {
   background-color: #ece9e9;
@@ -138,20 +144,6 @@ header nav ul li:hover>ul {
   display: block;
   height: 5px;
   margin: 7px 0;
-  transition: all 1s ease-in-out;
-}
-
-.nav-icon:hover::before {
-  transform: translateY(12px) rotate(135deg);
-}
-
-.nav-icon:hover::after {
-  transform: translateY(-12px) rotate(-135deg);
-}
-
-.nav-icon:hover div {
-  transform: scale(0);
-  background-color: black;
 }
 
 /* END HEADER */
@@ -501,7 +493,10 @@ button {
 }
 
 @media only screen and (min-width: 600px) {
-  main {
+  .menu {
+    visibility: visible;
+  }
+   main {
     max-width: 768px;
   }
 #all-headshots{

@@ -1,4 +1,5 @@
-$('#stupid-hamburger').click(function(){
-$('#menu').toggleClass('visible');
- // console.log("clicked...");
+$(document).ready(function(){
+$("#hamburger").click(function(){
+$(".menu").toggleClass("show")
+});
 });
