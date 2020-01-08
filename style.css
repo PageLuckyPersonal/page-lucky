@@ -73,12 +73,14 @@ header .icon-image-move-left {
 .menu {
   visibility: hidden;
 }
-.myDropdown{
+
+.myDropdown {
   visibility: hidden;
-  }
-  .show {
+}
+
+.show {
   visibility: visible;
-  }
+}
 
 header nav ul {
   background-color: #ece9e9;
@@ -466,42 +468,76 @@ button {
   font-family: inherit;
 }
 
-/* START MEDIA QUERIES 600 */
-@media only screen and (max-width: 600px) {
-  #mc-embedded-subscribe-form input[type=checkbox]{
-  display: inline; 
-  width: auto;
-  margin-right: 10px;
-}
-  #mc_embed_signup{
-  background:#fff; 
-  clear: left;
-  font:14px Helvetica,Arial,sans-serif; 
+.video-container {
+  display: flex;
+  flex-direction: column;
 }
 
-	#mergeRow-gdpr {
-  margin-top: 20px;
+.video-section {
+  display: flex;
+  flex-direction: column;
 }
-	#mergeRow-gdpr fieldset label {
-  font-weight: normal;
+
+.video-embed {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
 }
-	#mc-embedded-subscribe-form .mc_fieldset{
-  border:none;
-  min-height: 0px;
-  padding-bottom:0px;
+
+.video-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
+#mergeRow-gdpr{
+  min-height: 0px !important; 
+  clear: none !important;
+}
+/* START MEDIA QUERIES 600 */
+@media only screen and (max-width: 600px) {
+  #mc-embedded-subscribe-form input[type=checkbox] {
+    display: inline;
+    width: auto;
+    margin-right: 10px;
+  }
+
+  #mc_embed_signup {
+    background: #fff;
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+  }
+
+  #mergeRow-gdpr {
+    margin-top: 20px;
+  }
+
+  #mergeRow-gdpr fieldset label {
+    font-weight: normal;
+  }
+
+  #mc-embedded-subscribe-form .mc_fieldset {
+    border: none;
+    min-height: 0px;
+    padding-bottom: 0px;
+  }
 }
 
 @media only screen and (min-width: 600px) {
   .menu {
     visibility: visible;
   }
-   main {
+
+  main {
     max-width: 768px;
   }
-#all-headshots{
-  margin: 0 auto;
-}
+
+  #all-headshots {
+    margin: 0 auto;
+  }
+
   .headshots-container {
     margin-top: 20px;
     display: flex;
@@ -509,9 +545,11 @@ button {
     flex-direction: column;
     width: 100%;
   }
+
   .vertical-headshot {
     flex: 1;
   }
+
   img.vertical-singer-headshot {
     max-height: 350px;
     max-width: 100%;
@@ -519,6 +557,7 @@ button {
     margin-left: auto;
     margin-right: auto;
   }
+
   img.horizontal-singer-headshot {
     max-height: 250px;
     max-width: 100%;
@@ -527,317 +566,334 @@ button {
     margin-right: auto;
   }
 }
-  /* END MEDIA QUERIES 600 */
-  /* MEDIA QUERIES 768 (Tablet) */
-  @media only screen and (min-width: 768px) {
-    header nav ul .nav-icon-li {
-      display: none;
-    }
 
-    header nav ul li:not(:last-child) {
-      border-bottom: none;
-    }
+/* END MEDIA QUERIES 600 */
+/* MEDIA QUERIES 768 (Tablet) */
+@media only screen and (min-width: 768px) {
+  header nav ul .nav-icon-li {
+    display: none;
+  }
 
-    main {
-      max-width: 1024px;
-    }
+  header nav ul li:not(:last-child) {
+    border-bottom: none;
+  }
 
-    .nav-icon-li {
-      display: none;
-    }
+  main {
+    max-width: 1024px;
+  }
 
-    header .social-media-icons ul li img {
-      height: 30px;
-    }
+  .nav-icon-li {
+    display: none;
+  }
 
-    header nav ul {
-      background-color: #ffffff;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin: 0 auto 7px auto;
-      padding: 0;
-      position: relative;
-      width: 100%;
-      visibility: visible;
-    }
+  header .social-media-icons ul li img {
+    height: 30px;
+  }
 
-    header nav ul li {
-      list-style: none;
-      flex: 1;
-      text-align: center;
-      background-color: #ece9e9;
-      border-radius: 7px;
-      margin: 0 3px;
-    }
+  header nav ul {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto 7px auto;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    visibility: visible;
+  }
 
-    header nav ul>li:hover>ul {
-      display: block;
-    }
+  header nav ul li {
+    list-style: none;
+    flex: 1;
+    text-align: center;
+    background-color: #ece9e9;
+    border-radius: 7px;
+    margin: 0 3px;
+  }
 
-    header nav ul .nav-icon-li {
-      background-color: #ffffff;
-    }
+  header nav ul>li:hover>ul {
+    display: block;
+  }
 
-    header nav ul>li>ul {
-      position: absolute;
-      display: none;
-      width: 30%;
-      text-indent: 8%;
-    }
+  header nav ul .nav-icon-li {
+    background-color: #ffffff;
+  }
 
-    header nav ul>li>ul>li {
-      text-align: left;
-      border-radius: 0;
-    }
+  header nav ul>li>ul {
+    position: absolute;
+    display: none;
+    width: 30%;
+    text-indent: 8%;
+  }
 
-    header nav ul li:hover>ul {
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      display: block;
-      z-index: 1;
-    }
+  header nav ul>li>ul>li {
+    text-align: left;
+    border-radius: 0;
+  }
 
-    main #company-logo {
-      height: 200px;
-      width: 200px;
-    }
+  header nav ul li:hover>ul {
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    display: block;
+    z-index: 1;
+  }
 
-    .video-responsive-home .video-wrapper {
-      justify-content: space-between;
-    }
+  main #company-logo {
+    height: 200px;
+    width: 200px;
+  }
 
-    main .video-wrapper iframe:nth-child(1) {
-      margin-right: 20px;
-    }
+  .video-responsive-home .video-wrapper {
+    justify-content: space-between;
+  }
 
-    main .video-wrapper iframe:nth-child(3) {}
+  main .video-wrapper iframe:nth-child(1) {
+    margin-right: 20px;
+  }
 
-    .mymic {
-      display: block;
-    }
+  main .video-wrapper iframe:nth-child(3) {}
 
-    .instagram-singer-images .instagram-singer-images-1 {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 100%;
-    }
+  .mymic {
+    display: block;
+  }
 
-    .instagram-singer-images-1 img {
-      max-width: 33%;
-      flex: 1;
-      order: 1;
-    }
+  .instagram-singer-images .instagram-singer-images-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
 
-    .instagram-singer-images-1 h3 {
-      padding: 0 30px;
-      flex: 1;
-      order: 2;
-    }
+  .instagram-singer-images-1 img {
+    max-width: 33%;
+    flex: 1;
+    order: 1;
+  }
 
-    .instagram-singer-images-1 #third-insta {
-      order: 3;
-    }
+  .instagram-singer-images-1 h3 {
+    padding: 0 30px;
+    flex: 1;
+    order: 2;
+  }
 
-    .instagram-singer-images .instagram-singer-images-2 {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
+  .instagram-singer-images-1 #third-insta {
+    order: 3;
+  }
 
-    .instagram-singer-images .instagram-singer-images-2 img {
-      flex: 1;
-      max-width: 33%;
-    }
+  .instagram-singer-images .instagram-singer-images-2 {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    footer .footer-uls {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr;
-      justify-items: center;
-      width: 100%;
-    }
+  .instagram-singer-images .instagram-singer-images-2 img {
+    flex: 1;
+    max-width: 33%;
+  }
 
-    footer .footer-uls .footer-ul-1 {
-      grid-column: 1;
-    }
+  footer .footer-uls {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    width: 100%;
+  }
 
-    footer .footer-uls .footer-ul-2 {
-      grid-column: 2;
-    }
+  footer .footer-uls .footer-ul-1 {
+    grid-column: 1;
+  }
 
-    footer .footer-uls .footer-ul-3 {
-      grid-column: 3;
-    }
+  footer .footer-uls .footer-ul-2 {
+    grid-column: 2;
+  }
 
-    footer .footer-social-media ul li img {
-      width: auto;
-      height: 30px;
-    }
+  footer .footer-uls .footer-ul-3 {
+    grid-column: 3;
+  }
+
+  footer .footer-social-media ul li img {
+    width: auto;
+    height: 30px;
+  }
 
   .headshots-container {
     flex-direction: row;
   }
-  }
-  /* END MEDIA QUERIES 768 */
-  /* MEDIA QUERIES 1024*/
-  @media only screen and (min-width: 1024px) {
-    header .social-media-icons ul li img {
-      height: 40px;
-    }
+}
 
-    header nav ul {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin: 0 auto 6px;
-      padding: 0;
-    }
-
-    header nav ul li {
-      list-style: none;
-      flex: 1;
-      text-align: center;
-      background-color: #ece9e9;
-      border-radius: 7px;
-      margin: 0 3px;
-    }
-
-    header nav ul .nav-icon-li {
-      background-color: #ffffff;
-    }
-
-    header nav ul>li>ul {
-      position: absolute;
-      display: none;
-      width: 30%;
-      text-indent: 8%;
-    }
-
-    header nav ul>li>ul>li {
-      text-align: left;
-      border-radius: 0;
-    }
-
-    header nav ul li:hover>ul {
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      display: block;
-      z-index: 1;
-    }
-
-    main {
-      margin: 0 auto;
-    }
-
-    main .video-wrapper iframe:nth-child(3) {
-      margin-left: 20px;
-    }
-
-    .instagram-singer-images .instagram-singer-images-1 {
-      width: 100%;
-    }
-
-    .instagram-singer-images-1 img {
-      max-width: 300px;
-      max-height: 300px;
-    }
-
-    footer .footer-social-media ul li img {
-      height: 40px;
-    }
+/* END MEDIA QUERIES 768 */
+/* MEDIA QUERIES 1024*/
+@media only screen and (min-width: 1024px) {
+  header .social-media-icons ul li img {
+    height: 40px;
   }
 
-  /*this is about landing page (which has extra css)*/
-  main .double-column-flex {
+  header nav ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto 6px;
+    padding: 0;
   }
 
-  main .double-column-flex img {
-    padding: 25px;
+  header nav ul li {
+    list-style: none;
+    flex: 1;
+    text-align: center;
+    background-color: #ece9e9;
+    border-radius: 7px;
+    margin: 0 3px;
+  }
+
+  header nav ul .nav-icon-li {
+    background-color: #ffffff;
+  }
+
+  header nav ul>li>ul {
+    position: absolute;
+    display: none;
+    width: 30%;
+    text-indent: 8%;
+  }
+
+  header nav ul>li>ul>li {
+    text-align: left;
+    border-radius: 0;
+  }
+
+  header nav ul li:hover>ul {
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    display: block;
+    z-index: 1;
+  }
+
+  main {
+    margin: 0 auto;
+  }
+
+  main .video-wrapper iframe:nth-child(3) {
+    margin-left: 20px;
+  }
+
+  .instagram-singer-images .instagram-singer-images-1 {
     width: 100%;
-    flex: 1;
   }
 
-  main .double-column-flex p {
-    flex: 1;
+  .instagram-singer-images-1 img {
+    max-width: 300px;
+    max-height: 300px;
   }
 
-  #Airplane {
-    transform: translateX(0px);
-    animation: move 4s ease-in-out infinite;
+  footer .footer-social-media ul li img {
+    height: 40px;
+  }
+}
+
+/*this is about landing page (which has extra css)*/
+main .double-column-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+main .double-column-flex img {
+  padding: 25px;
+  width: 100%;
+  flex: 1;
+}
+
+main .double-column-flex p {
+  flex: 1;
+}
+
+#Airplane {
+  transform: translateX(0px);
+  animation: move 4s ease-in-out infinite;
+}
+
+@keyframes move {
+  100% {
+    margin-left: 100%;
   }
 
-  @keyframes move {
-    100% {
-      margin-left: 100%;
-    }
-
-    0% {
-      margin-right: 10%;
-    }
+  0% {
+    margin-right: 10%;
   }
+}
 
-  /* Media Queries */
-  @media only screen and (min-width: 768px) {
-    main .double-column-flex {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+  main .double-column-flex {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
+}
 
-  /*Biography Page*/
+/*Biography Page*/
+.about-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-image #michigan-singer-image {
+  width: 100%;
+  height: auto;
+}
+
+.about-image-2 #church-image {
+  width: 100%;
+  height: auto;
+}
+
+/*Biography Page Queries*/
+@media only screen and (min-width: 1024px) {
   .about-page-wrapper {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+  }
+
+  .about-page-wrapper .paragraph-container {
+    flex: 1;
+  }
+
+  .about-image {
+    flex: 1;
+    padding: 15px;
+  }
+
+  .about-page-wrapper .paragraph-container-2 {
+    flex: 2;
+    order: 2;
+  }
+
+  .about-image-2 {
+    flex: 1;
+    padding: 15px;
+    order: 1;
   }
 
   .about-image #michigan-singer-image {
     width: 100%;
     height: auto;
+    max-width: 400px;
   }
 
   .about-image-2 #church-image {
     width: 100%;
     height: auto;
+    max-width: 400px;
   }
 
-  /*Biography Page Queries*/
-  @media only screen and (min-width: 1024px) {
-    .about-page-wrapper {
-      display: flex;
-      flex-direction: row;
-    }
-
-    .about-page-wrapper .paragraph-container {
-      flex: 1;
-    }
-
-    .about-image {
-      flex: 1;
-      padding: 15px;
-    }
-
-    .about-page-wrapper .paragraph-container-2 {
-      flex: 2;
-      order: 2;
-    }
-
-    .about-image-2 {
-      flex: 1;
-      padding: 15px;
-      order: 1;
-    }
-
-    .about-image #michigan-singer-image {
-      width: 100%;
-      height: auto;
-      max-width: 400px;
-    }
-
-    .about-image-2 #church-image {
-      width: 100%;
-      height: auto;
-      max-width: 400px;
-    }
+  .video-section {
+    flex-direction: row;
   }
+
+  .video-embed {
+    padding-bottom: 0;
+  }
+
+  .video-embed iframe {
+    width: auto;
+    height: auto;
+    position: static;
+    padding-right: 20px;
+  }
+}
